@@ -1,0 +1,43 @@
+#load required packages
+library(ggplot2)
+library(cowplot)
+library(dplyr)
+library(limma)
+library(scales)
+library(tidyverse)
+library(matlib)
+
+#define a coordinate system for plotting
+xlim <- c(-40,45)
+ylim <- c(-35,25)
+plot(xlim, ylim, type="n", xlab="X1", ylab="X2")
+grid()
+
+#end point coordinates of the cells to be plotted (data from manual tracking in FIJI/ImageJ)
+cell1=c(42.9904404908,-0.34680983379)
+cell2=c(-17.6816433974,18.0284532312)
+cell3=c(7.28067669306,-6.24058002262)
+cell4=c(-1.04009667044,6.58738985642)
+cell5=c(30.8560902793,-18.7217400679)
+cell6=c(10.4009667044,-35.3632867949)
+cell7=c(9.70767986773,22.5353169158)
+cell8=c(-16.9880237299,13.8680665495)
+cell9=c(-1.38690650423,0.69328683664)
+cell10=c(-1.38690650423,4.85400634933)
+cell11=c(-35.3632867949,-0.69328683664)
+cell12=c(9.01439303108,-7.28067669306)
+
+#plot the cells as vectors
+vectors(cell1, labels="1", pos.lab=4, frac.lab=.5)
+vectors(cell2, labels="2", pos.lab=4, frac.lab=.5)
+vectors(cell3, labels="3", pos.lab=4, frac.lab=.5)
+vectors(cell4, labels="4", pos.lab=4, frac.lab=.5)
+vectors(cell5, labels="5", pos.lab=4, frac.lab=.5)
+vectors(cell6, labels="6", pos.lab=4, frac.lab=.5)
+vectors(cell7, labels="7", pos.lab=4, frac.lab=.5)
+vectors(cell8, labels="8", pos.lab=4, frac.lab=.5)
+vectors(cell9, labels="9", pos.lab=4, frac.lab=.5)
+vectors(cell10, labels="10", pos.lab=4, frac.lab=.5)
+vectors(cell11, labels="11", pos.lab=4, frac.lab=.5)
+vectors(cell12, labels="12", pos.lab=4, frac.lab=.5)
+
